@@ -66,7 +66,7 @@ def get_gush(gush_id):
 
 
 # get plans from gush_id
-@app.route('/gush/<gush_id>/plans')
+@app.route('/gush/<gush_id>/plans/')
 def get_plans(gush_id):
     if db.gushim.find_one({"gush_id": gush_id}) is None:
         abort(404)
